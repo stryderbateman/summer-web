@@ -26,3 +26,11 @@ function generate(){
 }
 
 generate()
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.querySelector('.centered-box').classList.add('fade-in');
+            document.querySelector('.bottom-right-image').classList.add('fade-in');
+            document.querySelector('.top-left-image').classList.add('fade-in');
+        }, 3000);
+    });
