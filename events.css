@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'Fleshandblood';
+	src: url('hpunk.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 119, 255, 0.1);;
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid rgba(0, 119, 255, 0.4);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Fleshandblood', sans-serif;
+
+}
+
+.navbar a:hover {
+    color: rgb(66, 203, 249);
+}
+
+.navbar:hover{
+    transform: scale(1.1);
+}
+

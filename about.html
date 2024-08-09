@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="stylesheet" type="text/css" href="about.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+	<section>
+		<h2>travelvita</h2>
+        <br>
+        <h3>travel your way</h3>
+		<div class="box"></div>
+        <div class="container"></div>
+        <p class="centered-box">TravelVita is your go-to summer travel agency, dedicated to crafting unforgettable getaways. Whether you're seeking sun-soaked beaches, vibrant cities, or thrilling adventures, our expert team curates personalized itineraries just for you. With a passion for exploration and a commitment to quality, we make your dream summer vacation a reality. Let TravelVita handle the details while you enjoy the journey</p>
+        <div class="right-box">At TravelVita, your journey begins the moment you start planning. Let us take care of the details, so you can focus on making memories that will last a lifetime. Embrace the essence of summer with TravelVita—where every trip is a celebration of life, adventure, and the joy of travel.</div>
+	</section>
+	<svg>
+		<filter id="gooey">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+			<feColorMatrix values="
+														1 0 0 0 0
+														0 1 0 0 0
+														0 0 1 0 0
+														0 0 0 50 -10"
+											/>
+		</filter>
+	</svg>
+    <script>
+		document.addEventListener('DOMContentLoaded', () => {
+			let container = document.querySelector('.container');
+			for (let j = 0; j < 4; j++){
+				let loader = document.createElement('div');
+				loader.classList.add('loader');
+				loader.style.setProperty('--j', j);
+				for (let i = 1; i <= 20; i++){
+					let span = document.createElement('span');
+					span.style.setProperty('--i',i);
+					loader.appendChild(span);
+				}
+				container.appendChild(loader);
+			}
+		})
+	</script>
+	<script>
+		function falling(){
+			let box = document.querySelector('.box')
+			let e = document.createElement('div');
+
+			e.setAttribute('class','circle');
+			box.appendChild(e);
+			let size = Math.random() * 100;
+			e.style.width = 15 + size + 'px';
+			let boxWidth = box.clientWidth;
+			e.style.left = Math.random() * boxWidth + 'px';
+			setTimeout(function(){
+				box.removeChild(e)
+			},5000)
+		}
+		setInterval(function(){
+			falling();
+		},200);
+	</script>
+</body>
+</html>
