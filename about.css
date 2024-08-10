@@ -242,7 +242,6 @@ h3
     font-family: 'Fleshandblood', sans-serif;
     text-align: center;
     transition: transform 0.3s ease;
-    border-radius: 8px; 
 }
 
 .right-box:hover{

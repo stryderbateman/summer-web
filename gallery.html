@@ -1,24 +1,81 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Summer Fun</title>
-		<link rel="stylesheet" href="gallery.css">
-		<link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+<head>
+<title>Simple Image Lightbox</title>
+<link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+<section>
+    <div class="box">
+        <div class="imgBx">
+            <img src="1.webp">
+            <h2>Click Again To Close</h2>
+            <div class="content">
+                <h3>SunSplash AZ</h3>
+                <p>SunSplash is a water park with exciting slides, pools, and family-friendly attractions, perfect for summer fun.</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="2.jpg">
+            <h2>Click Again To Close</h2>
+            <div class="content">
+                <h3>Honolulu Hawaii</h3>
+                <p>Hawaii is a tropical paradise known for its stunning beaches, lush landscapes, and vibrant culture, offering a perfect getaway for relaxation and adventure.</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="3.jpeg">
+            <h2>Click Again To Close</h2>
+            <div class="content">
+                <h3>Dubai</h3>
+                <p>Dubai is a modern, cosmopolitan city renowned for its futuristic architecture, luxury shopping, and vibrant nightlife.</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="4.jpg">
+            <h2>Click Again To Close</h2>
+            <div class="content">
+                <h3>Paris France</h3>
+                <p>Paris is a city celebrated for its iconic landmarks, world-class museums, and charming streets, making it a cultural and romantic hub.</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="5.jpg">
+            <h2>Click Again To Close</h2>
+            <div class="content">
+                <h3>The Great Wall of China</h3>
+                <p>The Great Wall of China is an ancient, massive fortification stretching over 13,000 miles, built to protect against invasions and showcasing impressive historical and architectural achievements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<p class="centered-box">Click on the pictures to enlarge it</p>
 
-	</head>
-	<body>
-		<div class="navbar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl2+I6p9pYp5+mgp8l5r0pZ1e3hPq0D+0IFZ0OV5xT8" crossorigin="anonymous"></script>
-		<script src="script.js"></script>
-	</body>
+
+<script type="text/javascript">
+    let imgBx = document.querySelectorAll('.imgBx');
+
+    imgBx.forEach( popup => popup.addEventListener('click', ()=>{
+        popup.classList.toggle('active');
+    }));
+</script>
+
+</body>
 </html>

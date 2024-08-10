@@ -1,24 +1,69 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Summer Fun</title>
-		<link rel="stylesheet" href="events.css">
-		<link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+<head>
+<title>events</title>
+<link rel="stylesheet" type="text/css" href="events.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+<div class="container">
+<div class="card">
+    <div class="box">
+    <div class="content">
+        <h2>Activities</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, placeat.</p>
+        <a href="https://www.danielle-moss.com/summer-activities/">Read More</a>
+    </div>
+    </div>
+</div>
+<div class="card">
+    <div class="box">
+    <div class="content">
+        <h2>Explore</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, placeat.</p>
+        <a href="https://earth.google.com/web/@0,-2.31709985,0a,22251752.77375655d,35y,0h,0t,0r/data=OgMKATA">Read More</a>
+    </div>
+    </div>
+</div>
+<div class="card">
+    <div class="box">
+    <div class="content">
+        <h2>Travel</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, placeat.</p>
+        <a href="https://www.spirit.com/s/contact-us">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+<script>
+    function falling(){
+        let e = document.createElement('div');
+        e.setAttribute('class','circle');
+        document.body.appendChild(e);
+        let size = Math.random() * 25;
+        e.style.width = 20 + size + 'px';
+        e.style.left = Math.random() * + innerWidth + 'px';
+        let angle = Math.random() * 330;
+        e.style.filter = `hue-rotate(${angle}deg)`;
 
-	</head>
-	<body>
-		<div class="navbar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl2+I6p9pYp5+mgp8l5r0pZ1e3hPq0D+0IFZ0OV5xT8" crossorigin="anonymous"></script>
-		<script src="script.js"></script>
-	</body>
+        setTimeout(function(){
+            document.body.removeChild(e)
+        },90000)
+    }
+    setInterval(function(){
+        falling();
+    },200);
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
+

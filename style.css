@@ -50,19 +50,19 @@ body
 }
 .container .block:nth-child(4n + 1)
 {
-	background: rgb(255, 255, 0);
+	background: rgb(255, 255, 0, 0.5);
 }
 .container .block:nth-child(4n + 2)
 {
-	background: rgb(0, 239, 12);
+	background: rgb(0, 239, 12, 0.5);
 }
 .container .block:nth-child(4n + 3)
 {
-	background: rgb(66, 203, 249);
+	background: rgb(66, 203, 249, 0.5);
 }
 .container .block:nth-child(4n + 4)
 {
-	background: rgb(254, 161, 0);
+	background: rgb(254, 161, 0, 0.5);
 }
 .container button {
 	color: #fff;
@@ -72,7 +72,8 @@ body
     z-index: 1;
     margin: 10px;
     border: none;
-    background: rgb(239, 163, 0, 0.9);
+    background: rgb(239, 163, 0, 0.4);
+    border: 2px solid rgba(255, 153, 0, 0.7);
     font-size: 1.2em;
     cursor: pointer;
     padding: 15px 30px;
